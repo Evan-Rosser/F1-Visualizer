@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Visualizer</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333;
+            background-image: url("F1 Car.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #eee;
+        }
+
+        .container {
+            width: 850px;
+            max-width: calc(100% - 60px);
+            padding: 20px;
+            background-color: rgba(34, 34, 34, 0.95);
+            border-radius: 25px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #e10600;
+            text-align: center;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+        }
+
+        .feature-section {
+            background-color: rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            padding: 15px 20px;
+        }
+
+        button {
+            font-size: 16px;
+            color: #fff;
+            border-bottom: 2px solid #e10600;
+            padding: 3px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            background-color: #e10600;
+            border-radius: 100px;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+        button:hover {
+            border: 2px solid #fff;
+        }
+
+        ul {
+            font-size: 13px;
+            line-height: 1.8;
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        li::marker {
+            color: #e10600;
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 15px 0;
+                background-attachment: scroll;
+            }
+
+            .container {
+                max-width: calc(100% - 50px);
+                padding: 20px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            button {
+                font-size: 15px;
+            }
+
+            ul {
+                font-size: 13px;
+            }
+        }
+        .menuButton a {
+            color:#e10600;
+            text-decoration: none;
+        }
+        .menuButton a:visited {
+            color: #e10600;
+            text-decoration: none;
+        }
+
+        .menuButton a:hover {
+            color: #ff3333;
+            text-decoration: none;
+        }
+
+        .menuButton a:active {
+            color: #e10600;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>F1 Visualizer</h1>
+
+        <p class="intro">
+            Welcome to the F1 Visualizer! Explore races, drivers,
+            teams and statistics from the world of Formula 1.
+        </p>
+
+        <div class="features">
+
+            <section class="feature-section">
+                <button>Races & Sessions</button>
+                <ul>
+                    <li>Watch live races</li>
+                    <li>Watch historical races</li>
+                    <li>View the race calendar</li>
+                    <li>Explore qualifying results</li>
+                    <li>Replay races lap by lap</li>
+                </ul>
+            </section>
+
+            <section class="feature-section">
+                <button>Standings & Results</button>
+                <ul>
+                    <li>View current driver standings</li>
+                    <li>View current constructor standings</li>
+                    <li>Follow live standings during races</li>
+                    <li>Explore historical race results</li>
+                    <li>Compare championship points across seasons</li>
+                </ul>
+            </section>
+
+            <section class="feature-section">
+                <button>Live Race Data</button>
+                <ul>
+                    <li>View an interactive circuit map</li>
+                    <li>Track driver positions in real time</li>
+                    <li>View live lap and sector times</li>
+                    <li>Compare driver gaps and intervals</li>
+                    <li>Monitor fastest laps and position changes</li>
+                </ul>
+            </section>
+
+            <section class="feature-section">
+                <button>Driver & Telemetry Analysis</button>
+                <ul>
+                    <li>Compare driver lap times</li>
+                    <li>Analyse speed, braking and throttle data</li>
+                    <li>Compare drivers around the circuit</li>
+                    <li>View driver career statistics</li>
+                    <li>Explore team and driver performance</li>
+                </ul>
+            </section>
+
+            <section class="feature-section">
+                <button>Strategy & Tyres</button>
+                <ul>
+                    <li>Track pit stops and tyre changes</li>
+                    <li>View tyre compounds and stint lengths</li>
+                    <li>Analyse tyre degradation</li>
+                    <li>Compare pit-stop strategies</li>
+                    <li>Explore undercuts and overcuts</li>
+                </ul>
+            </section>
+
+            <section class="feature-section">
+                <button>Race Events & Circuits</button>
+                <ul>
+                    <li>Follow safety cars and virtual safety cars</li>
+                    <li>Review penalties and retirements</li>
+                    <li>Explore overtakes and race battles</li>
+                    <li>View circuit layouts, corners and sectors</li>
+                    <li>Explore weather and track conditions</li>
+                </ul>
+            </section>
+
+            <section class="feature-section">
+                <button>Advanced Features</button>
+                <ul>
+                    <li>Compare drivers across different seasons</li>
+                    <li>Explore race statistics and trends</li>
+                    <li>Simulate alternative pit-stop strategies</li>
+                    <li>Analyse why drivers gain or lose time</li>
+                    <li>Export race data and statistics</li>
+                </ul>
+            </section>
+
+            <section class="feature-section">
+                <button>Menu</button>
+                <ul>
+                    <li><span class="menuButton"><a href="Login.html"><b>Login</b></a></span> - Log into your account</li>
+                    <li><span class="menuButton"><a href="Register.html"><b>Register</b></a></span> - Create a new account</li>
+                    <li><span class="menuButton"><a href="About Us.html"><b>About Us</b></a></span> - Information about F1 Visualizer</li>
+                    <li><span class="menuButton"><a href="Settings.html"><b>Settings</b></a></span> - Customise prefences</li>
+                    <li><span class="menuButton"><a href="Help & Support.html"><b>Help & Support</b></a></span> - Website help and troubleshooting</li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+</body>
+</html>
