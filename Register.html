@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+    </head>
+    
+        <style>
+            @font-face {
+                font-family: 'Formula1-Bold';
+                src: url('Formula1-Bold.woff2') format('woff2');
+                font-weight: 700;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Formula1-Regular';
+                src: url('Formula1-Regular.woff2') format('woff2');
+                font-weight: 400;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Formula1-Regular-Bold';
+                src: url('Formula1-Regular.woff2') format('woff2');
+                font-style: normal;
+            }
+            @font-face{
+                font-family: 'Titillium-Web';
+                src: url('NaPecZTIAOhVxoMyOr9n_E7fdMPmDQ.woff2') format('woff2');
+                font-weight: 400;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Formula1-Black';
+                src: url('Formula1-Black.woff2') format('woff2');
+                font-weight: 500;
+                font-style: normal;
+            }
+            body {
+                background-color: #f7f4f1;
+                margin: 0px;
+                font-family: sans-serif;
+            }
+            header {
+                background-color: #15151d;
+            }
+            .logo {
+                margin: 41px;
+                width: 200px;
+            }
+            .options {
+                display: flex;
+                gap: 10px;
+                background-color: #38383f;
+                min-height: 47px;
+                justify-content: center;
+            }
+            button {
+                outline: none;
+                background-color: transparent;
+                border: none;
+                color: #ffffff;
+                cursor: pointer;
+                border-top: 4px solid transparent;
+                border-bottom: 4px solid transparent;
+                padding: 12px;
+                padding-left: 24px;
+                padding-right: 24px;
+                font-size: 15px;
+                min-width: 125px;
+            }
+            .current {
+                border-bottom: 4px solid #df2904;
+                font-family: 'Formula1-Regular-Bold',sans-serif;
+                font-size: 15px;
+                font-weight: 900;
+                letter-spacing: 1.2px;
+            }
+            .inactive {
+                border-bottom: 4px solid transparent;
+                font-family: 'Formula1-Regular',sans-serif;
+                font-size: 15px;
+            }
+            .inactive:hover {
+                border-bottom: 4px solid #fff;
+            }
+            #registerForm {
+                display: flex;
+                width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+                flex-direction: column;
+            }
+            .input {
+                width: 98%;
+                height: 48px;
+                border-radius: 10px;
+                border: 1px solid #38383f;
+                padding-left: 2%;
+                font-family: 'Titillium-Web',sans-serif !important;
+                font-size: 15px;
+            }
+            .input::placeholder {
+                font-size: 15px;
+                font-family: 'Titillium-Web',sans-serif !important;
+            }
+            h2 {
+                font-family: 'Titillium-Web',sans-serif;
+                letter-spacing: 1.2px;
+                align-items: start;
+                font-size: 15px;
+            }
+            h1 {
+                margin-top: 30px;
+                color: #333;
+                text-transform: uppercase;
+                font-family: 'Formula1-Bold',sans-serif;
+                font-weight: 700;
+                letter-spacing: 1.2px;
+                border-bottom: 0.5px solid #38383f;
+                padding-bottom: 20px;
+            }
+            #create-account {
+                width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #registerForm input {
+                align-items: center;
+            }
+            #registerForm#message {
+                align-items: center;
+            }
+            .confirmButton {
+                background-color: #df2904;
+                font-family: 'Formula1-Bold',sans-serif;
+                color: #f7f4f1;
+                text-transform: uppercase;
+                padding: 10px;
+                border-radius: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 10px;
+            }
+            .bottom {
+                border-top: 10px solid #38383f;
+                border-right: 10px solid #38383f;
+                border-radius: 0px 25px 0px 0px;
+                margin: 20px;
+            }
+            .Bottom-Line {
+                display: flex;
+                margin-left: 20px;
+                margin-right: 20px;
+                gap: 24px;
+                margin-bottom: 10px;
+            }
+            .Main {
+                margin-top: 20px;
+                display: flex;
+                padding-bottom: 15px;
+                border-bottom: 0.5px solid #38383f;
+                margin-right: 20px;
+
+            }
+            a {
+                text-decoration: none;
+            }
+            a:active {
+                color: #000;
+            }
+            a:hover {
+                color: #000;
+            }
+            a:visited {
+                color: #000;
+            }
+            .Footer-Options {
+                display: flex;
+                margin-left: auto;
+                font-family: 'Formula1-Regular',sans-serif;
+                font-size: 12px;
+            }
+            .Footer-Sub-Options {
+                margin-right: 20px;
+            }
+            a:active .Footer-Sub-Options {
+                color: #000;
+            }
+            a:hover .Footer-Sub-Options {
+                color: #000;
+            }
+            a .Footer-Sub-Options {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            a:visited .Footer-Sub-Options {
+                color: #000;
+            }
+            .Language {
+                display: flex;
+            }
+            .Language-Options {
+                display: flex;
+                text-transform: uppercase;
+                font-size: 10px;
+                font-family: 'Formula1-Bold',sans-serif;
+                letter-spacing: 1px;
+                color: #38383f;
+            }
+            .Language-Sub-Options {
+                margin-right: 10px;
+                border-bottom: 3px solid transparent;
+            }
+            .Language-Sub-Options:active {
+                border-bottom: 3px solid #df2904;
+            }
+            .Language-Sub-Options:hover {
+                border-bottom: 3px solid #df2904;
+            }
+            .Language-Sub-Options.current-language {
+                border-bottom: 3px solid #df2904;
+            }
+            .Language-Options a {
+                text-decoration: none;
+                color: #38383f;
+            }
+            .Language-Options a:visited {
+                color: #38383f;
+            }
+            .© {
+                font-family: 'Titillium-Web',sans-serif;
+                font-size: 13px;
+                margin-left: auto;
+                margin-right: 20px;
+            }
+        </style>
+    <body>
+        <header><a href="index.html"><img src="f1_logo.svg" alt="logo" class="logo"></a></header>
+        <section class="options">
+            <a href="Login.html"><button class="inactive">Sign In</button></a>
+            <button class="current">Register</button>
+        </section>
+        <div id="create-account">
+            <h1>Create Account</h1>
+            <form id="registerForm">
+                <h2>First name</h2>
+                <input type="text" id="Firstname" name="Firstname" placeholder="First name" required class="input">
+                <h2>Last name</h2>
+                <input type="text" id="Surname" name="Surname" placeholder="Last name" required class="input">
+                <h2>Email</h2>
+                <input type="email" id="Email" name="Email" placeholder="Email Address" required class="input">
+                <h2>Password</h2>
+                <input type="password" id="Password" name="Password" placeholder="Password" required class="input">
+                <p id="message" role="status"></p>
+                <button type="submit" class="confirmButton">Register</button>
+            </form>
+        </div>
+        <div class="bottom">
+            <div class="Main">
+                <a href="index.html"><img src="f1_logo.svg" alt="logo" style="width: 133px;"></a>
+                <div class="Footer-Options">
+                    <a href="Privacy Policy.html"><p class="Footer-Sub-Options">Privacy Policy</p></a>
+                    <a href="Subscription.html"><p class="Footer-Sub-Options">Subscription</p></a>
+                    <a href="Terms Of Use.html"><p class="Footer-Sub-Options">Terms Of Use</p></a>
+                    <a href="F1 Help.html"><p class="Footer-Sub-Options">F1 Help</p></a>
+                    <a href="Cookie Preferences.html"><p class="Footer-Sub-Options">Cookie Preferences</p></a>
+                </div>
+            </div>
+            <div class="Language">
+                <div class="Language-Options">
+                    <a href="#"><p class="Language-Sub-Options current-language" data-lang="en">en</p></a>
+                    <a href="#"><p class="Language-Sub-Options" data-lang="fr">fr</p></a>
+                    <a href="#"><p class="Language-Sub-Options" data-lang="de">de</p></a>
+                    <a href="#"><p class="Language-Sub-Options" data-lang="es">es</p></a>
+                    <a href="#"><p class="Language-Sub-Options" data-lang="nl">nl</p></a>
+                    <a href="#"><p class="Language-Sub-Options" data-lang="pt">pt</p></a>
+                    <a href="#"><p class="Language-Sub-Options" data-lang="ja">ja</p></a>
+                </div>
+                <p class="©">© 2003-2026 Formula One World Championship Limited</p>
+            </div>
+        </div>
+        <div class="Bottom-Line">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1481 24" height="24" width="1481">
+                <a href="index.html">
+                    <path fill="#E10600" d="M1455.5 0H0V11.6475H1455.5V0Z"></path>
+                    <path fill="#E10600" d="M1455.5 13.0825H0V24H1455.5V13.0825Z"></path>
+                </a>
+                <a href="index.html">
+                    <path fill="#E10600" d="M1455 24H1456.5L1467.42 13.0825H1455V24Z"></path>
+                    <path fill="#E10600" d="M1455 0V11.6475H1468.85L1480.5 0H1455Z"></path>
+                </a>
+            </svg>
+            <a href="index.html"><img src="f1_logo.svg" alt="Logo" style="width: 96px;"></a>
+        </div>
+    </body>
+    <script src="translate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script>
+            const supabaseClient = window.supabase.createClient(
+                "https://gptwijmmgzdxwpeaympt.supabase.co",
+                "sb_publishable_KLmef-JgtoFioZyNPYUVIA_CpnW0uiS"
+            );
+
+            const form = document.getElementById("registerForm");
+            const message = document.getElementById("message");
+
+            const email = document.getElementById("Email");
+            const password = document.getElementById("Password");
+
+            const firstname = document.getElementById("Firstname");
+            const surname = document.getElementById("Surname");
+
+            form.addEventListener("submit", async (event) => {
+                event.preventDefault();
+
+                // Check password length
+                if (password.value.length < 12) {
+                    message.textContent = "Use a password of at least 12 characters.";
+                    return;
+                }
+
+                message.textContent = "Creating account...";
+
+                // Send the registration details to Supabase
+                const { data, error } = await supabaseClient.auth.signUp({
+                    email: email.value.trim(),
+                    password: password.value,
+                    options: {
+                        data: {
+                            firstname: firstname.value.trim(),
+                            surname: surname.value.trim()
+                        }
+                    }
+                });
+
+                if (error) {
+                    message.textContent = error.message;
+                    return;
+                }
+
+                form.reset();
+
+                message.textContent = data.session
+                    ? "Account created successfully!"
+                    : "Registration received! Check your email to confirm your account.";
+            });
+        </script>
+</html>
